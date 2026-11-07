@@ -772,7 +772,14 @@ public final class SprauteNetwork {
                     return false;
                 }
             };
-            CommandSourceStack source = player.createCommandSourceStack().withSource(capture).withPermission(4);
+            // Fix (security): canEdit() admits operators of permission level 2, but this used to run every command of
+            // the editor console with level 4 - so a level-2 moderator could run /op, /stop or "/sprautejs unsafe on"
+            // (Java classes in story scripts = arbitrary code on the server). Commands now run with the player's own
+            // level; the owner of a single-player/LAN world keeps level 4 as before.
+            CommandSourceStack source = player.createCommandSourceStack().withSource(capture);
+            if (server.isSingleplayerOwner(player.getGameProfile())) {
+                source = source.withPermission(4);
+            }
             sendTo(player, new Packets.Log(0, "Spraute", "> /" + line));
             server.getCommands().performPrefixedCommand(source, line);
 

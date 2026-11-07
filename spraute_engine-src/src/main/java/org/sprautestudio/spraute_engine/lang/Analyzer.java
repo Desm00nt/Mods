@@ -970,7 +970,7 @@ public final class Analyzer {
     private void checkEmotion(Ast.Expr e) {
         String name = e instanceof Ast.Ident id ? id.name : (e instanceof Ast.StringLit s ? s.value : null);
         if (name == null || !Specs.EMOTIONS.contains(name.toUpperCase())) {
-            this.error("Неизвестная эмоция. Например: HAPPY_NEW, SAD1, ANGRY", e);
+            this.error("Неизвестная эмоция. Есть: " + String.join(", ", Specs.EMOTIONS), e);
         }
     }
 

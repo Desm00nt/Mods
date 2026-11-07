@@ -19,7 +19,7 @@ public enum ParamType {
     ITEM("предмет", "Id предмета: \"minecraft:diamond\""),
     EFFECT("эффект", "Id эффекта: \"minecraft:blindness\""),
     ENTITY("сущность", "Id типа сущности: \"spraute:npc\" или модель проекта: \"spraute:Робот\""),
-    EMOTION("эмоция", "Эмоция диалога: HAPPY_NEW, SAD1, ANGRY..."),
+    EMOTION("эмоция", "Эмоция диалога: JOY, SAD, ANGER, SURPRISE, FEAR, LAUGH..."),
     KEY("клавиша", "Клавиша: F8, F9, F10, G, SPACE..."),
     SCRIPT("скрипт", "Числовой id сюжета"),
     ANIM("анимация", "Анимация: \"entity/humanoid!walk\" или своя у модели: \"spraute:Робот/walk\". Смотрите вкладку «Ассеты»"),
