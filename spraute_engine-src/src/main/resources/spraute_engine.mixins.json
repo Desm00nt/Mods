@@ -1,0 +1,49 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "org.sprautestudio.spraute_engine.mixin",
+  "compatibilityLevel": "JAVA_17",
+  "refmap": "spraute_engine.refmap.json",
+  "mixins": [
+    "BlockDataMixin",
+    "EntityHitboxMixin",
+    "FireBlockAccess",
+    "LivingEntityHitboxMixin",
+    "RecipeManagerMixin",
+    "SpawnPlacementsAccess",
+    "RulesBlockStateMixin",
+    "RulesGameModeMixin",
+    "RulesInventoryMenuMixin",
+    "RulesInventoryMixin",
+    "RulesSlotMixin",
+    "RulesItemEntityMixin",
+    "RulesItemStackMixin",
+    "RulesLivingMixin",
+    "RulesMenuMixin",
+    "RulesPlayerMixin",
+    "RulesRidingMixin",
+    "RulesServerPlayerMixin",
+    "RulesXpOrbMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  },
+  "client": [
+    "BlockHideMixin",
+    "CameraRigMixin",
+    "CameraViewMixin",
+    "ContainerLabelsMixin",
+    "ContainerScreenAccess",
+    "ItemPackMixin",
+    "MenuScreenMixin",
+    "ModelItemMixin",
+    "MouseLockMixin",
+    "PlayerAnimMixin",
+    "PlayerSkinMixin",
+    "PostEffectMixin",
+    "RulesLocalPlayerMixin",
+    "SplashHideMixin",
+    "SlotWindowMixin",
+    "WidgetSizeMixin"
+  ]
+}

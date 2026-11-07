@@ -1,0 +1,7 @@
+package org.spongepowered.asm.mixin.injection;
+import java.lang.annotation.*;
+@Target({}) @Retention(RetentionPolicy.RUNTIME)
+public @interface Constant {
+    boolean nullValue() default false; int intValue() default 0; float floatValue() default 0f; long longValue() default 0L;
+    double doubleValue() default 0d; String stringValue() default ""; Class<?> classValue() default Object.class; int ordinal() default -1; String slice() default "";
+}
